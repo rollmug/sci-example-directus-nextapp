@@ -1,0 +1,33 @@
+services:
+  directus:
+    image: directus/directus:10.7.1
+    container_name: directus
+    restart: always
+    ports:
+      - 8055:8055
+    volumes:
+      - ./database:/directus/database
+      - ./uploads:/directus/uploads
+      - ./extensions:/directus/extensions
+    env_file: 
+      - ./sci-cosmic-playlist/.env.local
+    networks:
+      - app_network
+
+  cosmic-playlist:
+    container_name: cosmic-playlist
+    build:
+      context: ./sci-cosmic-playlist
+    restart: always
+    environment:
+      NODE_ENV: production
+    env_file: 
+      - ./sci-cosmic-playlist/.env.local
+    ports:
+      - 3000:3000
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge

@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  @apply h-full;
+}
+
+body {
+  @apply min-h-full;
+}
+
+.main-player-ui-grid .overflow-scroll::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.progress {
+  @apply h-4 !rounded-none bg-night-800;
+}
+
+progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+progress[value]::-webkit-progress-bar,
+progress[value]::-webkit-progress-value,
+progress[value]::-moz-progress-bar {
+  border-radius: 0 !important;
+  @apply bg-night-100;
+}
+
+.img-Green {
+  border-color: #89D938;
+  border-width: 1px;
+}
+
+.img-Green img {
+  filter: drop-shadow(0px 100px 0 #B0E25F);
+  transform: translateY(-100px);
+}
+
+.img-Purple {
+  border-color: #D959D6;
+  border-width: 1px;
+}
+
+.img-Purple img {
+  filter: drop-shadow(0px 100px 0 #E59AE3);
+  transform: translateY(-100px);
+}
+
+.img-Orange {
+  border-color: #FF973E;
+  border-width: 1px;
+}
+
+.img-Orange img {
+  filter: drop-shadow(0px 100px 0 #FFBE43);
+  transform: translateY(-100px);
+}
+
+.img-Yellow {
+  border-color: #FFDA14;
+  border-width: 1px;
+}
+
+.img-Yellow img {
+  filter: drop-shadow(0px 100px 0 #FFF09F);
+  transform: translateY(-100px);
+}
+
+.img-Blue {
+  border-color: #55E2E8;
+  border-width: 1px;
+}
+
+.img-Blue img {
+  filter: drop-shadow(0px 100px 0 #A0FBFE);
+  transform: translateY(-100px);
+}

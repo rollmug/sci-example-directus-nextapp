@@ -1,0 +1,1 @@
+Extensions folder for directus

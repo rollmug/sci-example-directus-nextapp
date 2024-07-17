@@ -1,0 +1,12 @@
+services:
+  cosmic-playlist:
+    container_name: cosmic-playlist
+    build:
+      context: .
+    restart: always
+    environment:
+      NODE_ENV: production
+    env_file: 
+      - .env.local
+    ports:
+      - 3000:3000
